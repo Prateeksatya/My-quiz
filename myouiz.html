@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+            margin:0px;
+            border:0px;
+            box-sizing: border-box;
+          
+        }
+        .wrapper{
+            justify-content: space-between;
+            
+            display: flex;
+            padding: 40px 30px;
+           z-index: 100px;
+           align-items: center;
+           }
+            body{
+                background-image: url("https://img.freepik.com/premium-photo/digital-cyberspace-geometric-with-particles-digital-data-network-connections-cyber-security-concept_974729-32444.jpg");
+             min-height: 100vh;
+                background-size: cover;
+
+            }
+        .navbar a{
+            font-size: 28px;
+            font-weight: 400;
+            justify-content: space-evenly;
+            color: rgb(198, 222, 15);
+            margin-left: 35px;
+            transform: rotate(45deg);
+            transition: .3s;
+            z-index: 100px;
+            text-decoration: none;            
+        }
+        .navbar a:hover, 
+        .navbar a.active{
+            color: rgb(101, 106, 246);
+        }
+       
+       
+        .logo{
+            height: 100px;
+           
+        }
+         
+            
+        .containt{
+            display: flex;
+            justify-content: center;
+            font-size: xx-large;
+            font-weight: 800;
+            align-items: center;
+            height: 100vh;
+            z-index: 100px;
+            color: bisque;
+         
+        }
+        .containt button{
+            text-decoration: none;
+            color: rgb(172, 220, 14);
+            font-size: 44px;
+            margin-left: 280px;
+            margin-top: 30px;
+           border: 4px solid rgb(250, 250, 250);
+           border-radius: 10px;
+           z-index: 100px;
+        }
+        .containt button:hover{
+            color: aqua;
+        }
+        .popup{
+            position: absolute;
+            top:500px;
+            left: 350px;
+            transform: translate(-50%, -50%) scale(0.1) ;
+            background-color: rgb(80, 65, 100) ;
+            width: 500px;
+            border-radius: 6px;
+            margin: 50px 30px 10px 650px;
+            padding: 10px 40px 30px 70px;
+            visibility : hidden;
+            transition: transfor 0.4s, top 0.4s;
+        }
+        .open-popup{
+            visibility: visible;
+            top: 500px;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .popup h2{
+            font-size:40px;
+
+        }
+        .popup .info{
+            display: inline-block;
+            font-size: x-large;
+            margin: 4px 0px;
+       }
+        .popup .buttons{
+           display: flex;
+           justify-content: space-between;
+        }
+        .popup .buttons .info-button{
+            border-radius: 4px solid rgb(20, 213, 171);
+            border: 2px;
+            outline: none;
+            width: 130px;
+            height: 45px;
+        }
+         .info-button{
+            border: 2px;
+        }
+        .popup .buttons a{
+            text-decoration: none;
+            color: rgb(172, 220, 14);
+            font-size: 44px;
+            margin-left: 180px;
+           border: 4px solid rgb(250, 250, 250);
+           border-radius: 10px;
+           z-index: 100px;
+        }
+        .popup .buttons a:hover{
+            color: aqua;
+        }
+        .popup .buttons .exit-button{
+            border: 4px solid rgb(250, 250, 250);
+            border-radius: 10px;
+            padding: 0px 20px 0px 20px ;
+        }
+        
+    </style>
+    
+</head>
+<body>
+   
+    <div class="wrapper">
+        
+    
+    <img src="logo.png" class="logo">
+    <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Service</a>
+            <a href="exp.html">Feedback</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="quiz-section">
+
+        </section>
+    <div id="output" class="containt">
+        <div class="box">
+    <h1>Welcome to MYQUIZ</h1>
+    <button type="submit" class="btn" onclick="openPopup()">start</button>
+    <!-- <a href="gamestep1.html" >start</a> -->
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="popup" id="popup">
+        <h2>Rules and Guide lines</h2>
+        <span class="info">1.This quiz contains  rounds</span>
+        <span class="info">2.Each round consist of 5 questions.</span>
+        <span class="info">3.It provides answer instantly.</span>
+        
+
+        <div class="buttons">
+            <button class=" info-button exit-button" onclick="closePopup()">Exit</button>
+            <a href="gamestep1.html" >Continue</a>
+        </div>
+    </div>
+    <script >
+    let popup = document.getElementById("popup");
+
+        function openPopup(){
+           popup.classList.add("open-popup");
+        }
+        function closePopup(){
+           popup.classList.remove("open-popup");
+        }
+        </script>
+    
+</body>
+</html>

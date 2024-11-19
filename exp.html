@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            border:0px;
+            box-sizing: border-box;
+          
+
+        }
+        .wrapper{
+            justify-content: space-between;
+            
+            display: flex;
+            padding: 40px 30px;
+           z-index: 100px;
+            align-items: center;
+           }
+            body{
+                background-image: url("https://img.freepik.com/premium-photo/digital-cyberspace-geometric-with-particles-digital-data-network-connections-cyber-security-concept_974729-32444.jpg");
+             min-height: 100vh;
+                background-size: cover;
+
+            }
+        .navbar a{
+            font-size: 28px;
+            font-weight: 400;
+            justify-content: space-evenly;
+            color: rgb(198, 222, 15);
+            margin-left: 35px;
+            transition: .3s;
+            z-index: 100px;
+            text-decoration: none;  
+           }  
+           .navbar a:hover,.navbar a.active{
+            color: rgb(101, 106, 246);
+        }
+       
+       
+        .logo{
+            height: 100px;
+           
+        }
+        .frm {
+            
+            justify-content: center;
+            position: relative;
+            width: 420px;
+            background: rgb(40, 64, 120);
+            color: black;
+            border-radius: 10px;
+            padding: 60px 50px;
+            font-size: xx-large;
+            margin: 250px  600px ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+                <img src="logo.png" class="logo">
+        <nav class="navbar">
+                <a href="myouiz.html" >Home</a>
+                <a href="#" >Service</a>
+                <a href="#" class="active">Feedback</a>
+            </nav>
+        </div>
+        <div class="frm">        
+            <form >
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="feedback-box">
+                <input type="text" id="text" placeholder="feedback" >
+            </div>
+        
+        
+        <div class="submit">
+        <input type="submit" value="submit">
+        
+        </div>
+            </form>
+        </div>
+   
+</body>
+</html>

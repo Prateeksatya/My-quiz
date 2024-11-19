@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+            margin:0px;
+            border:0px;
+            box-sizing: border-box;
+          
+        }
+        .wrapper{
+            justify-content: space-between;
+            
+            display: flex;
+            padding: 40px 30px;
+           z-index: 100px;
+           align-items: center;
+           }
+            body{
+                background-image: url("https://img.freepik.com/premium-photo/digital-cyberspace-geometric-with-particles-digital-data-network-connections-cyber-security-concept_974729-32444.jpg");
+             min-height: 100vh;
+                background-size: cover;
+                
+            }
+        .navbar a{
+            font-size: 28px;
+            font-weight: 400;
+            justify-content: space-evenly;
+            color: rgb(198, 222, 15);
+            margin-left: 35px;
+            transform: rotate(45deg);
+            transition: .3s;
+            z-index: 100px;
+            text-decoration: none;            
+        }
+        .navbar a:hover, 
+        .navbar a.active{
+            color: rgb(101, 106, 246);
+        }
+       
+       
+        .logo{
+            height: 100px;
+           
+        }
+         
+        .ques .h1{
+            justify-content: center;
+        } 
+         .quiz-section{
+            position: relative;
+            width: 100%;
+            background-color: rgb(34, 34, 63);
+            z-index: 400px;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            border-radius: 10px;
+            padding: 60px 50px;
+            font-size: 29px;
+            margin: 250px  ;
+         }
+         .quiz-box h1{
+          text-align: center;
+         }
+        
+         
+          
+         .quiz-footer .next-btn{
+            width: 100px;
+            height: 45px;
+            border-radius: 18px;
+            cursor: pointer;
+            
+            
+         }
+         .quiz-footer .next-btn:hover{
+            background-color: blue;
+            
+         }
+        
+         .answers button{
+                display: flex;
+                justify-content: space-between; 
+                font-size:x-large ; 
+                position: relative;
+                border-radius: 18px;
+                border: 4px;
+                background-color: rgb(144, 144, 211);
+            
+         }
+
+    </style>
+</head>
+<body>
+   
+    <div class="wrapper">
+        
+    
+    <img src="logo.png" class="logo">
+    <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Service</a>
+            <a href="exp.html">Feedback</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="quiz-section">
+            <div class="quiz-box">
+                <h1>MYQuiz</h1>
+                <div class="quiz-header">
+                    
+                   
+                <!-- </div>
+                <h2 class="question-text">What is the primary function of the Central Processing Unit (CPU)?</h2>
+                <div class="option-list">
+                    <div class="option">
+                        <span>A) To store data permanently</span>
+                    </div>
+                    <div class="option">
+                        <span>B) To execute instructions</span>
+                    </div>
+                    <div class="option">
+                        <span>C)To display graphics</span>
+                    </div>
+                    <div class="option">
+                        <span>D) To manage network connections</span>
+                    </div> -->
+                    <div class="question" id="question-text">What is the primary function of the Central Processing Unit (CPU)?</div>
+                   <div class="answers">
+                       <button onclick="checkAnswer('wrong')">A) To store data permanently</button>
+                        <button onclick="checkAnswer('correct')">B) To execute instructions</button>
+                        <button onclick="checkAnswer('wrong')">C)To display graphics</button>
+                        <button onclick="checkAnswer('wrong')">D) To manage network connections</button>
+                    </div>
+
+                </div>
+                <div class="quiz-footer">
+                    
+                    <button class="next-btn">Finish</button>
+                </div>
+            </div>
+        </section>
+    </div>
+   <script src="2.js"></script>
+    
+</body>
+</html>
